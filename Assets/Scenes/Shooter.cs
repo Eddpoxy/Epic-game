@@ -18,6 +18,7 @@ public class Shooter : MonoBehaviour
     [SerializeField]
     Transform spawnLocation;
 
+    public AudioClip mySound;
 
     float timer = 0;
 
@@ -32,8 +33,9 @@ public class Shooter : MonoBehaviour
     {
         timer -= Time.deltaTime;
 
-        if ((fireButton == KeyCode.None || Input.GetKeyDown(fireButton)) && timer <= 0)
+        if ((fireButton == KeyCode.None || Input.GetKey(fireButton)) && timer <= 0)
         {
+            AudioSource.PlayClipAtPoint(mySound, transform.position);
             Vector2 pos = transform.position;
             if(spawnLocation != null)
             {
