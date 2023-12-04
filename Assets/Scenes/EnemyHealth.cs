@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,10 +10,11 @@ public class EnemyHealth : MonoBehaviour
 
     int health;
 
-    // Start is called before the first frame update
+   
     void Start()
     {
         health = maxHealth;
+      
     }
 
     public void Hurt(int amount)
@@ -27,5 +29,6 @@ public class EnemyHealth : MonoBehaviour
     void GameOver()
     {
         Destroy(gameObject);
+     
     }
 }
