@@ -43,6 +43,9 @@ public class Enemy : MonoBehaviour
         rigidBody.velocity = velocity;
         
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+       
+    }
 
-    
 }
