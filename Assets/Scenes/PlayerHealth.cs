@@ -27,7 +27,7 @@ public class PlayerHealth : MonoBehaviour
 
     void GameOver()
     {
-        //TODO: Game over?
+        Debug.Log("GAME OVER");
     }
 }
                 

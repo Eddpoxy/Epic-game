@@ -11,7 +11,8 @@ public class PlayerMovement : MonoBehaviour
 
     //Variables used within this script
     Rigidbody2D rigidBody;
-    
+
+    public AudioClip mySound;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("This object is missing a rigidbody!");
         }
+        AudioSource.PlayClipAtPoint(mySound, transform.position);
     }
 
     // Update is called once per frame
