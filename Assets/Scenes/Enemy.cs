@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
         {
             Debug.Log("This object is missing a rigidbody!");
         }
+        
     }
 
     // Update is called once per frame

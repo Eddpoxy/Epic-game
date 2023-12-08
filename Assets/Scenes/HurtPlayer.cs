@@ -11,6 +11,7 @@ public class HurtPlayer : MonoBehaviour
     [SerializeField]
     public GameObject obj;
 
+   
     public AudioClip mySound;
     private void OnCollisionEnter2D(Collision2D collision)
     {
