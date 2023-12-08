@@ -5,6 +5,8 @@ using UnityEngine;
 public class background : MonoBehaviour
 {
     Rigidbody2D rb;
+    [SerializeField]
+    float speed = -2;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +17,6 @@ public class background : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector2(-2, 0);
+        rb.velocity = new Vector2(speed, 0);
     }
 }
