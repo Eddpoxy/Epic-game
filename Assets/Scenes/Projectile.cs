@@ -15,5 +15,14 @@ public class Projectile : MonoBehaviour
         }
 
         rb2.velocity = velocity;
+        StartCoroutine(DelayedAction());
+     
+    }
+    IEnumerator DelayedAction()
+    {
+        Debug.Log("Start of Coroutine");
+        yield return new WaitForSeconds(2f); // Wait for 2 seconds
+        Debug.Log("After 2 seconds");
+        Destroy(gameObject);
     }
 }
