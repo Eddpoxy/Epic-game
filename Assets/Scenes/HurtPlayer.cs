@@ -1,6 +1,7 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class HurtPlayer : MonoBehaviour
@@ -24,5 +25,13 @@ public class HurtPlayer : MonoBehaviour
         phealth.Hurt(hurtAmount);
         Destroy(obj);
         AudioSource.PlayClipAtPoint(mySound, transform.position);
+    }
+    private void Update()
+    {
+        if (gameObject.transform.position.x <= -15)
+        {
+            Destroy(obj);
+            AudioSource.PlayClipAtPoint(mySound, transform.position);
+        }
     }
 }
